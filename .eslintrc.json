@@ -24,7 +24,11 @@
     {
       "files": ["*.ts", "*.tsx"],
       "extends": ["plugin:@nrwl/nx/typescript"],
-      "rules": {}
+      "rules": {
+        // Applied to all applications in this workspace
+        "no-empty-function": "off",
+        "@typescript-eslint/no-empty-function": "off"
+      }
     },
     {
       "files": ["*.js", "*.jsx"],

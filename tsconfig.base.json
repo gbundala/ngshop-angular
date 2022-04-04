@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@bundzinc/orders": ["libs/orders/src/index.ts"],
+      "@bundzinc/products": ["libs/products/src/index.ts"],
+      "@bundzinc/ui": ["libs/ui/src/index.ts"],
+      "@bundzinc/users": ["libs/users/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
