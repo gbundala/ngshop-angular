@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
@@ -11,6 +10,7 @@ const routes: Routes = [
   {
     path: '',
     component: ShellComponent,
+    children: [{ path: 'dashboard', component: DashboardComponent }],
   },
 ];
 
@@ -21,10 +21,7 @@ const routes: Routes = [
     ShellComponent,
     SidebarComponent,
   ],
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot(routes, { initialNavigation: 'enabledBlocking' }),
-  ],
+  imports: [BrowserModule, RouterModule.forRoot(routes,  { initialNavigation: 'enabled' })],
   providers: [],
   bootstrap: [AppComponent],
 })
